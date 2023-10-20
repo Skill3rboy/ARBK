@@ -1,0 +1,32 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\avrasm\inc\m328pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\Debug\HelloWorld.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>HelloWorld.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>HelloWorld.map</FILE>
+  <FILE>HelloWorld.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</FILE><LINE>13</LINE></start>
+  <main><FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</FILE><LINE>22</LINE></main>
+  <delay><FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</FILE><LINE>31</LINE></delay>
+  <l0><FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</FILE><LINE>34</LINE></l0>
+  <l1><FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</FILE><LINE>37</LINE></l1>
+  <l2><FILE>C:\Users\Fabian\Desktop\ARBK\Neuer Ordner\HelloWorld\HelloWorld\main.asm</FILE><LINE>40</LINE></l2>
+ </LABELS>
+</ASSEMBLER_INFO>
