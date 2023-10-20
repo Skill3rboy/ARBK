@@ -106,7 +106,7 @@ Disassembly of section .text:
 
 void init()
 {
-	DDRB =0xff; // Port B als ausgang 
+	DDRB = 0xff; // Port B als ausgang 
   a6:	8f ef       	ldi	r24, 0xFF	; 255
   a8:	84 b9       	out	0x04, r24	; 4
 	PORTB = 0x00;
@@ -231,7 +231,7 @@ int main(void)
 		}
 		else
 		{
-			PORTB =(1<<on);
+			PORTB =(1<<on); // Konstantes Leuchten
  152:	21 e0       	ldi	r18, 0x01	; 1
  154:	30 e0       	ldi	r19, 0x00	; 0
 {
@@ -239,7 +239,7 @@ int main(void)
     /* Replace with your application code */
     while (1) 
     {
-		if(blink)
+		if(blink) // Blinkfunktion
  156:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__data_start>
  15a:	88 23       	and	r24, r24
  15c:	79 f0       	breq	.+30     	; 0x17c <main+0x2e>
@@ -261,7 +261,7 @@ int main(void)
 		}
 		else
 		{
-			PORTB =(1<<on);
+			PORTB =(1<<on); // Konstantes Leuchten
  17c:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <__data_end>
  180:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <__data_end+0x1>
  184:	a9 01       	movw	r20, r18

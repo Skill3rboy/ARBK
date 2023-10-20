@@ -37,7 +37,7 @@ void init()
 	
 	DDRD = 0x00; // Portd als Taster eingang
 	PORTD |= (1<<SW1) | (1<<SW2);
-	EICRA |= (1<<ISC11) | (1<<ISC01); // Fallende flanke = Interrupt Request
+	EICRA |= (1<<ISC11) | (1<<ISC01); // Steigende flanke = Interrupt Request
 	EIMSK = (1<< INT0) | (1<< INT1); //INT schalten externen Interrupt frei
 	sei(); // globale Interrupt maske
 	
