@@ -9,7 +9,6 @@
 #ifndef SEVENSEG_H_
 #define SEVENSEG_H_
 
-
 #define F_CPU 16000000UL // Taktrate des Controllers
 
 #include <util/delay.h> // delay funktion

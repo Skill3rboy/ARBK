@@ -14,10 +14,10 @@ void init()
 	PORTD= (1<<PIND0); 
 	
 	DDRB=0x01;	//Port B0 als Zehnerstelle im 7segment
-	PORTB |= (1<<PINB1) | (1<<PINB2); // B1 und b2 als eingang für die Swtiches
+	PORTB |= (1<< PINB1) | (1<<PINB2); // B1 und b2 als eingang für die Swtiches
 	
-	cli();
-	PCICR |= 0x01;
-	PCMSK0|=(1<<PINB1) | (1 << PINB2);
-	sei();
+	cli(); // Interupts aus
+	PCICR |= 0x01; // Portb lässt Interrupt zu
+	PCMSK0|=(1 << PINB1) | (1 << PINB2); // if(PB1 && PB2) ->Interrupt
+	sei(); // Interupts an
 }

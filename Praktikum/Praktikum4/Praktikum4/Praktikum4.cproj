@@ -108,7 +108,19 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="keys.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="keys.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sevenseg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sevenseg.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

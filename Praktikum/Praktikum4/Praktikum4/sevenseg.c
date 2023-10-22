@@ -11,5 +11,5 @@ void print(int num,int numbs[])
 {
 	PORTD = numbs[num];
 	_delay_ms(10);
-	PORTB ^= (1<<PINB0);
+	PORTB ^= (1 << PINB0);
 }
