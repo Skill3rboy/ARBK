@@ -8,7 +8,9 @@
 #include <avr/io.h> // IO ports
 #include <stdbool.h> // für bool
 #include <util/delay.h> // Für delay
-#define SW1 PINC0 // Aliase damit ich es besser lesen kann
+
+// Aliase damit ich es besser lesen kann
+#define SW1 PINC0 
 #define SW2 PINC1
 #define LED0 PIND0
 #define LED9 PIND1

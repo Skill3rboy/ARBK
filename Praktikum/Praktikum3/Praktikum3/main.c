@@ -10,7 +10,7 @@
 #include <avr/io.h> //IO ports
 #include <avr/interrupt.h> // interrupts
 
-volatile uint32_t Clk =0;
+volatile uint32_t systemClk =0;
 #define LED PIND0 // Led ausgang für lesbarkeit
 
 /*
@@ -37,26 +37,26 @@ void init(){
 
 ISR(TIMER0_COMPA_vect)
 {
-	Clk++;										//Timer-Counter
+	systemClk++;										//Timer-Counter
 }
 
 void waitFor(uint32_t ms)
 {
-	uint32_t ziel = Clk + ms; //Zielpunkt auf den wir warten
+	uint32_t ziel = systemClk + ms; //Zielpunkt auf den wir warten
 	
-	if(ziel < Clk)	// Wenn ein overflow bei Ziel passiert ist
+	if(ziel < systemClk)	// Wenn ein overflow bei Ziel passiert ist
 	{
-		Clk=0;		//CLk reset
-		while(Clk<ms) 
+		systemClk=0;		//CLk reset
+		while(systemClk<ms) 
 		{}
 	}
-	while(Clk < ziel) // Warte solange bis die CLK größer der Zielzeit ist
+	while(systemClk < ziel) // Warte solange bis die CLK größer der Zielzeit ist
 	{}
 }
 
 void waitUntil(uint32_t ms)
 {
-	while (Clk <=ms) // Wait until Clk ist größer/gleich ms
+	while (systemClk <=ms) // Wait until Clk ist größer/gleich ms
 	{
 	}
 	

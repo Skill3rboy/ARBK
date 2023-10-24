@@ -12,9 +12,6 @@
 #include <avr/io.h> //IO ports
 #include <avr/interrupt.h> // interrupts
 
-#define bit_is_clear(sfr, bit) (!(_SFR_BYTE(sfr) & _BV(bit)))	// bit im IO-Register sfr clear, return 0 if set
-// https://manpages.debian.org/testing/avr-libc/bit_is_clear.3avr.en.html 
-
 void init();
 
 #endif /* KEYS_H_ */

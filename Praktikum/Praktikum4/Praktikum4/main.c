@@ -37,23 +37,25 @@ Zahlenanzeige : gfe dcba
 
 ISR(PCINT0_vect)
 {
-	if(bit_is_clear(PINB, PINB1)) // SW1 Gedrückt?
-	{
-		if(counter == 0)
+	if(!(PINB&(1<<PINB1))) // SW1 pressed?
 		{
-			counter=100; //  wir wollen runterzählen aber 0 ist ende, also setzen wir ihn nach das ende
+			if(counter==0)
+			{
+				counter=100; //wir wollen runterzählen aber 0 ist ende, also setzen wir ihn nach das ende
+			}
+			counter--;
 		}
-		counter--;
-	}
-	if(bit_is_clear(PINB, PINB2)) // SW2 Gedrückt?
-	{
-		if(counter==99)
+	if(!(PINB&(1<<PINB2))) // SW2 pressed?
 		{
-			counter=-1; // wir wollen hochzählen aber 99 ist ende, also setzten wir ihn vor den Anfang
+			if(counter==99)
+			{
+				counter=-1;  // wir wollen hochzählen aber 99 ist ende, also setzten wir ihn vor den Anfang
+			}
+			counter++;
 		}
-		counter++;
-	}
 }
+
+
 int main(void)
 {
 	init();

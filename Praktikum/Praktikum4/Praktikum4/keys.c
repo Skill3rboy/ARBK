@@ -16,8 +16,11 @@ void init()
 	DDRB=0x01;	//Port B0 als Zehnerstelle im 7segment
 	PORTB |= (1<< PINB1) | (1<<PINB2); // B1 und b2 als eingang für die Swtiches
 	
+	
+	
 	cli(); // Interupts aus
 	PCICR |= 0x01; // Portb lässt Interrupt zu
 	PCMSK0|=(1 << PINB1) | (1 << PINB2); // if(PB1 && PB2) ->Interrupt
+	
 	sei(); // Interupts an
 }
