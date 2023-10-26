@@ -22,7 +22,7 @@ start:
 	out DDRD, temp 
 	out DDRB, temp 
 
-	ldi led,  0b0000_0001	//erstes Ledmuster
+	ldi led,  0b0000_0001	;erstes Ledmuster
 	rcall r_l ; erster Rechts-links aufruf
 	
 l_r:
@@ -66,14 +66,14 @@ delay:
 ; by utility from Bret Mulvey
 ; Delay 3 199 996 cycles
 ; 199ms 999us 750 ns at 16 MHz
-//Loop funktioniert so dass runtergezählt wird
+;Loop funktioniert so dass runtergezählt wird
     ldi  r18, 17 
     ldi  r19, 60
     ldi  r20, 202
-L1: dec  r20 // erster loop
+L1: dec  r20 ; erster loop
     brne L1
-    dec  r19 // zweiter loop
+    dec  r19 ; zweiter loop
     brne L1
-    dec  r18 // dritter loop
+    dec  r18 ; dritter loop
     brne L1
 	ret
