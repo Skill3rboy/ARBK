@@ -3,11 +3,11 @@
 #include <mutex>
 
 
-std::mutex mutex;
+std::mutex mutex; // Mutex objekt erstellen, managet resurcen für threads
 
-void thread1()
+void thread1() // thread 1 a-z
 {
-	mutex.lock();
+	mutex.lock(); // Mutex sperren
 
 	
 	for(char letter='a';letter<='z';letter++)
@@ -15,12 +15,12 @@ void thread1()
 		std::cout << letter << ", ";
 	}
 	std::cout << std::endl;
-	mutex.unlock();
+	mutex.unlock(); // wieder freigeben
 }
 
-void thread2()
+void thread2() // Thread 2 0-32
 {
-	mutex.lock();
+	mutex.lock(); // sperren
 
 	
 	for (short number =0; number <= 32; number++)
@@ -28,13 +28,13 @@ void thread2()
 		std::cout << number << ", ";
 	}
 	std::cout << std::endl;
-	mutex.unlock();
+	mutex.unlock(); // freigeben
 }
 
 
-void thread3()
+void thread3() // thread 3 A-Z
 {
-	mutex.lock();
+	mutex.lock(); // Sperren
 
 
 	for (char letter = 'A'; letter <= 'Z'; letter++)
@@ -42,15 +42,17 @@ void thread3()
 		std::cout << letter << ", ";
 	}
 	std::cout << std::endl;
-	mutex.unlock();
+	mutex.unlock(); // Freigeben
 }
 
 int main()
 {
+	// Erstellung 3 Threads
 	std::thread T1(thread1);
 	std::thread T2(thread2);
 	std::thread T3(thread3);
 
+	//Threadsstarten
 	std::cout << "Sync Rumble!" << std::endl;
 	T1.join();
 	T2.join();
